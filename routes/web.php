@@ -20,3 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('/admin','AdminController@index');
+Route::post('/addimage','AdminController@store')->name('addimage');
+Route::get('/adminpage', 'AdminController@display');
+Route::get('/editimage/{id}','AdminController@edit');
+Route::put('/updateimage/{id}','AdminController@update');
+
