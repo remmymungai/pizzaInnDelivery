@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Admin;
+use DB;
 
 class AdminController extends Controller
 {
@@ -34,7 +35,7 @@ class AdminController extends Controller
         }
 
         $admin->save();
-        return view('admin')->with('admin',$admin);
+        return redirect('/adminpage')->with('admin',$admin);
     }
 
 
@@ -69,5 +70,11 @@ class AdminController extends Controller
 
         $admins->save();
         return redirect('/adminpage')->with('admins',$admins);
+    }
+
+    function delete($id)
+    {
+        DB::table('menus')->where('id',$id)->delete();
+        return redirect('/adminpage');
     }
 }

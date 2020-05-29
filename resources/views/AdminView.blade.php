@@ -20,7 +20,7 @@
             <th scope="col">FOOD NAME</th>
             <th scope="col">FOOD PRICE</th>
             <th scope="col">FOOD IMAGE</th>
-            <th scope="col">EDIT</th>
+            <th scope="col">UPDATE</th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +31,7 @@
             <td>{{$admin->Food_Name}}</td>
             <td>{{$admin->Food_Price}}</td>
           <td><img src="{{ asset('uploads/foods/'.$admin->Food_Image)}} " width="100px;" height="100px;" alt="Image"></td>
-            <td> <a href="/editimage/{{$admin->id}} " class="btn btn-success">EDIT</a></th>
+            <td> <a href="/editimage/{{$admin->id}} " class="btn btn-success">EDIT</a>&nbsp;<a href="/delete/{{$admin->id}}" class="btn btn-danger">DELETE</th>
           </tr>
           <tr>
             @endforeach
