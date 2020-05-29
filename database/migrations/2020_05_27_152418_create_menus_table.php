@@ -17,6 +17,8 @@ class CreateMenusTable extends Migration
             $table->increments('id');
             $table->string('Food_Name');
             $table->mediumText('Food_Image')->nullable();
+            $table->string('food_description');
+            $table->string('meal_type');
             $table->timestamps();
         });
     }

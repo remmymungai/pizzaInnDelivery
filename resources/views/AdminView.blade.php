@@ -19,17 +19,21 @@
             <th scope="col">ID</th>
             <th scope="col">FOOD NAME</th>
             <th scope="col">FOOD PRICE</th>
+            <th scope="col">FOOD DESCRIPTION</th>
+            <th scope="col">MEAL TYPE</th>
             <th scope="col">FOOD IMAGE</th>
             <th scope="col">EDIT</th>
           </tr>
         </thead>
         <tbody>
-            @foreach ($admins as $admin)
+            @foreach ($data['admins'] as $admin)
           
           <tr>
             <th >{{$admin->id}}</th>
             <td>{{$admin->Food_Name}}</td>
             <td>{{$admin->Food_Price}}</td>
+            <td>{{$admin->food_description}}</td>
+            <td>{{$admin->meal_type}}</td>
           <td><img src="{{ asset('uploads/foods/'.$admin->Food_Image)}} " width="100px;" height="100px;" alt="Image"></td>
             <td> <a href="/editimage/{{$admin->id}} " class="btn btn-success">EDIT</a></th>
           </tr>
@@ -37,6 +41,15 @@
             @endforeach
         </tbody>
       </table>
+
+      <h1 class="jumbotron">Meal Types</h1>
+      <ul>
+        
+        @foreach ($data['meal'] as $meal)
+        <li>{{ $meal->id}}</li>
+        <li>{{ $meal->menu_type}}</li>
+        @endforeach
+      </ul>
 </div>
 </div>
 
