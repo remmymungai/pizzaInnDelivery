@@ -5,7 +5,7 @@
     <div class="heading_box">
       <h1 class=heading>Manage pizza menu</h1>
     </div>
-    <table class="pizza_table">
+     <table class="pizza_table">
         <thead class="pizza_table-head">
           <tr class="pizza_table-row">
             <th scope="col">ID</th>

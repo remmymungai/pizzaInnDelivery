@@ -15,7 +15,7 @@
 
             <div class="form-group">
                 <label>Food Price</label>
-                <input type="text" name="Food_Price" class="form-control" placeholder="Enter Food Price in Kenyan Shillings">
+                <input type="text" name="Food_Price" class="form-control" placeholder="Enter Price in Kenyan Shillings">
             </div>
             <div class="form-group">
                 <label>Food Description</label>

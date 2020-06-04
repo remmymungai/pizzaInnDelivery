@@ -29,4 +29,5 @@ Route::get('/adminpage', 'AdminController@display');
 Route::get('/editimage/{id}','AdminController@edit');
 Route::put('/updateimage/{id}','AdminController@update');
 Route::get('/menu','menuController@index');
+Route::get('/delete/{id}','AdminController@delete');
 
