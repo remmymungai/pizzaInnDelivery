@@ -2,42 +2,7 @@
 *{
     font-family: "Nunito", sans-serif;
 }
-.navbar{
-    position: relative;
-    margin: 1rem;
-    border-bottom: 1px solid;
-    &_logo-box{
-        position:absolute;
-       
-    }
-    &_logo{
-        height:5rem;
-        width: 13rem;
-    }
-    &_navigation{
-        position: absolute;
-        left: 12%;
-        top:3%;
-        margin-left: 15rem;
-    }
-    &_list{
-        list-style: none;    
-        margin-right: auto;
-        margin-left: auto;
-        &_item{
-                &:last-child{
-                    margin-left: 30rem;
-                }
-            display: inline-block;
-            margin-left: 3rem;
-        }
-    }
-    &_links{
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-  
-}
+
 .btn{
     text-decoration: none;
     text-transform: uppercase;
@@ -54,7 +19,8 @@
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    background-color: rgba(#999, $alpha: .2);
+    background-color: rgba(#ffe277,.8);
+    
     
     &_options{
         list-style: none;
@@ -74,23 +40,24 @@
         //border: 1px solid;
         margin-top: -15px;
         list-style: none;
-        background-color: rgba(yellow, $alpha: .3);
-        border-radius: 10px;
+        background-color:#087956;
     }
     &_list_item{
-        box-shadow: 4px 2px 5px 2px rgba(black,.4);
-        border-radius: 10px;
-       margin-bottom: 1rem;
+       box-shadow: 4px 2px 5px 2px rgba(black,.4);
+       border-radius: 10px;
+       margin-bottom: 3rem;
        overflow: hidden;
        padding: 1rem;
+       transition: all .5s;
        background-image:linear-gradient(-105deg,rgba(#fff,.9)0%,rgba(#fff,.9)50%,transparent 0%) ,url('/images/pizza_banner2.jpg');
+         
     }
     &_heading{
        text-transform: uppercase;
        font-weight: 700;
        letter-spacing: 10px; 
        font-size: 1.5rem;
-       color: red;
+       color: white;
     }
    
     &_item{
@@ -105,9 +72,7 @@
             width:100%;
             overflow: hidden;
             transition: all .5s;
-            &:hover{
-                transform: scale(1.1);
-            }
+           
         }
         &_name{
             text-align: left;

@@ -1,47 +1,200 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);* {
-  font-family: "Nunito", sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Nunito);.container {
+  display: flex;
+  margin: 0 auto 2rem auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2rem;
+  background-color: rgba(255, 226, 119, 0.8);
 }
 
-.navbar {
-  position: relative;
-  margin: 1rem;
-  border-bottom: 1px solid;
+.pizza_table {
+  padding: 1rem;
+  text-align: center;
 }
 
-.navbar_logo-box {
-  position: absolute;
+.pizza_table-head {
+  border: 1px solid;
 }
 
-.navbar_logo {
-  height: 5rem;
-  width: 13rem;
+.pizza_table-row {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
 }
 
-.navbar_navigation {
-  position: absolute;
-  left: 12%;
-  top: 3%;
-  margin-left: 15rem;
-}
-
-.navbar_list {
-  list-style: none;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.navbar_list_item {
-  display: inline-block;
-  margin-left: 3rem;
-}
-
-.navbar_list_item:last-child {
-  margin-left: 30rem;
-}
-
-.navbar_links {
-  text-decoration: none;
+.pizza_table-data {
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.8);
+  background-color: rgba(8, 121, 86, 0.7);
+  padding: 10px;
   text-transform: uppercase;
+}
+
+.btn_modify {
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: red;
+  background-color: white;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+}
+
+.btn_modify:hover {
+  transform: translateY(20px);
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.8);
+  transform: translateY(50px);
+}
+
+.heading {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  text-shadow: 2px 1px black;
+}
+
+.form {
+  padding: 1rem;
+  text-align: center;
+}
+
+.form label {
+  color: white;
+  text-shadow: 2px 1px black;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.form input,
+.form select {
+  border-radius: 10px;
+  width: 50rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.form-group {
+  margin: 2rem;
+  padding: 1rem;
+  width: 50rem;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: rgba(8, 121, 86, 0.7);
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.form-group .custom {
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.form .btn_save {
+  padding: 1rem 5rem;
+  text-transform: uppercase;
+  border-radius: 40px;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.8);
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.6);
+  transition: all 0.5s;
+}
+
+.form .btn_save:hover {
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.7);
+  padding: 1rem 7rem;
+  transform: translateY(10px);
+  border-radius: 30px;
+}
+
+.content {
+  background-image: linear-gradient(to right bottom, rgba(216, 76, 76, 0.7), rgba(230, 16, 16, 0.8)), url("/images/background.jpg");
+  margin: 0 1rem 1rem 1rem;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: relative;
+  top: 100%;
+  padding: 6rem 0;
+}
+
+.footer__logo-box {
+  position: absolute;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  top: 0;
+  right: 0;
+  background-color: white;
+}
+
+.footer__logo {
+  height: 10rem;
+}
+
+.footer__navigation {
+  border-top: 1px solid white;
+  padding: 3rem 0;
+  margin-left: 5rem;
+  color: white;
+  margin-top: 5rem;
+  transition: all 0.5s;
+}
+
+.footer__navigation-socials {
+  border-top: 1px solid white;
+  padding: 3rem 0;
+  margin-right: 5rem;
+  color: white;
+  margin-top: 5rem;
+}
+
+.footer__list {
+  list-style: none;
+  padding-bottom: 3rem;
+}
+
+.footer__item {
+  display: inline-block;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  display: inline-block;
+  transition: all 0.5s;
+  border-radius: 20px;
+}
+
+.footer__link:hover {
+  z-index: -1;
+  border: 1px red solid;
+  color: red;
+  transform: scale(1.3);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
 }
 
 .btn {
@@ -55,7 +208,7 @@
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  background-color: rgba(153, 153, 153, 0.2);
+  background-color: rgba(255, 226, 119, 0.8);
 }
 
 .menu_options {
@@ -76,16 +229,16 @@
   padding: 2rem;
   margin-top: -15px;
   list-style: none;
-  background-color: rgba(255, 255, 0, 0.3);
-  border-radius: 10px;
+  background-color: #087956;
 }
 
 .menu_list_item {
   box-shadow: 4px 2px 5px 2px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   overflow: hidden;
   padding: 1rem;
+  transition: all 0.5s;
   background-image: linear-gradient(-105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 0%), url("/images/pizza_banner2.jpg");
 }
 
@@ -94,7 +247,7 @@
   font-weight: 700;
   letter-spacing: 10px;
   font-size: 1.5rem;
-  color: red;
+  color: white;
 }
 
 .menu_item {
@@ -108,10 +261,6 @@
   width: 100%;
   overflow: hidden;
   transition: all 0.5s;
-}
-
-.menu_item_image:hover {
-  transform: scale(1.1);
 }
 
 .menu_item_name {
@@ -264,5 +413,88 @@
   background-color: rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
   border-right: 1px solid;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.9rem;
+  width: 97.5%;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(90deg, #087956 15%, rgba(0, 0, 0, 0.9) 15%);
+}
+
+.navbar_logo_box {
+  background-color: #087956;
+  transition: all 0.5s;
+}
+
+.navbar_logo_box:hover {
+  transform: scale(1.15);
+}
+
+.navbar_logo {
+  height: 5rem;
+  width: 13rem;
+}
+
+.navbar_navigation {
+  padding: 1rem;
+}
+
+.navbar_navigation_list-item {
+  display: inline-block;
+  color: white;
+  margin-right: 3rem;
+  transition: all 0.6s;
+}
+
+.navbar_link,
+.navbar:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border: 1px solid;
+  transition: all 0.5s;
+}
+
+.navbar_link:hover,
+.navbar:visited:hover {
+  color: white;
+  background-color: red;
+  border: none;
+  padding: 0.5rem 3rem 3rem 3rem;
+  box-shadow: 2px 2px whitesmoke;
+}
+
+.navbar_logout {
+  padding: 1rem;
+  order: 3;
+}
+
+.navbar_logout_btn,
+.navbar_logout:visited {
+  color: red;
+  padding: 0.5rem;
+  border: 1px solid;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.navbar_logout_btn:hover,
+.navbar_logout:visited:hover {
+  padding-left: 8rem;
+  padding-top: 2rem;
+  transition: scale(1.1);
+  background-color: rgba(255, 0, 0, 0.8);
+  border: none;
+  font-style: bold;
+  color: white;
 }
 

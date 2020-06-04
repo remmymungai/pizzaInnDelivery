@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Update Menu</title>
-</head>
-<body>
+@extends('layouts.adminApp')
+@section('content')
 <div class="container">
-<div class="jumbotron">
-    <h1>UPDATE PIZZA MENU</h1>
-    <a href="/admin" class="btn btn-primary">Add Pizza Type</a>
 
-    <table class="table table-stripped table-bordered">
-        <thead class="thead-dark">
-          <tr>
+    <div class="heading_box">
+      <h1 class=heading>Manage pizza menu</h1>
+    </div>
+    <table class="pizza_table">
+        <thead class="pizza_table-head">
+          <tr class="pizza_table-row">
             <th scope="col">ID</th>
             <th scope="col">FOOD NAME</th>
             <th scope="col">FOOD PRICE</th>
@@ -25,35 +17,46 @@
             <th scope="col">EDIT</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="pizza_table-body">
             @foreach ($data['admins'] as $admin)
           
-          <tr>
-            <th >{{$admin->id}}</th>
-            <td>{{$admin->Food_Name}}</td>
-            <td>{{$admin->Food_Price}}</td>
-            <td>{{$admin->food_description}}</td>
-            <td>{{$admin->meal_type}}</td>
-          <td><img src="{{ asset('uploads/foods/'.$admin->Food_Image)}} " width="100px;" height="100px;" alt="Image"></td>
-            <td> <a href="/editimage/{{$admin->id}} " class="btn btn-success">EDIT</a></th>
+          <tr class="pizza_table-row">
+            <td class="pizza_table-data">{{$admin->id}}</td>
+            <td class="pizza_table-data">{{$admin->Food_Name}}</td>
+            <td class="pizza_table-data">{{$admin->Food_Price}}</td>
+            <td class="pizza_table-data">{{$admin->food_description}}</td>
+            <td class="pizza_table-data">{{$admin->meal_type}}</td>
+          <td class="pizza_table-data"><img src="{{ asset('uploads/foods/'.$admin->Food_Image)}} " class="pizza_table-data-image" width="100px;" height="100px;" alt="Image"></td>
+            <td class="pizza_table-data"> <a href="/editimage/{{$admin->id}} " class="btn btn_modify">modify pizza</a></th>
           </tr>
           <tr>
             @endforeach
         </tbody>
       </table>
 
-      <h1 class="jumbotron">Meal Types</h1>
-      <ul>
-        
+   
+</div>
+
+<div class="container">
+  <div class="heading_box">
+    <h1 class="heading">Meal Types</h1>
+  </div>
+  <table class="pizza_table">
+        <thead class="pizza_table-head">
+          <tr class="pizza_table-row">
+            <th scope="col">ID</th>
+            <th scope="col">MEAL TYPE</th>
+        </thead>
+        <tbody class="pizza_table-body">
         @foreach ($data['meal'] as $meal)
-        <li>{{ $meal->id}}</li>
-        <li>{{ $meal->menu_type}}</li>
-        @endforeach
-      </ul>
-</div>
-</div>
-
-
-</div>
-</body>
-</html>
+          
+          <tr class="pizza_table-row">
+            <td class="pizza_table-data">{{ $meal->id}}</td>
+            <td class="pizza_table-data">{{ $meal->menu_type}}</td>
+            
+          <tr>
+            @endforeach
+        </tbody>
+</table>
+</div>      
+@endsection

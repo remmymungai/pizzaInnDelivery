@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Menu</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ asset('css/style.css')}}">
-        <script src="{{ asset('js/scripts.js') }}" defer></script>
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body>
+@extends('layouts.main')
+@section('content')
         <!-- <div class="navbar">
             <div class="navbar_logo_box">
                 <img src="{{ asset('images/pizzainn_logo.jpg') }}" alt="" class="navbar_logo">
@@ -62,6 +52,4 @@
             </ul>
             <a href="#" class="btn_customize_order"> proceed to checkout</a>
         </div>
-        
-    </body>
-</html>
+@endsection
