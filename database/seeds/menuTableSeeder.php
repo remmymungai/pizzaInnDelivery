@@ -21,7 +21,15 @@ class menuTableSeeder extends Seeder
         ]);
         DB::table('menu')->insert(
             [
-            'menu_type'=>'Lil Pepis'
+            'menu_type'=>'Supreme Pizzas'
+        ]);
+        DB::table('menu')->insert(
+            [
+            'menu_type'=>'Drinks'
+        ]);
+        DB::table('menu')->insert(
+            [
+            'menu_type'=>'Extras'
         ]);
     }
 }

@@ -4,20 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Admin;
+use App\meals;
 use DB;
+
 
 class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin');
+        $meals=meals::all();
+        return view('admin')->with('data',['meals'=>$meals]);
     }
 
     public function store(Request $request)
     {
+        $meals=meals::all();
         $admin=new Admin();
         $admin->Food_Name=$request->input('Food_Name');
         $admin->Food_Price=$request->input('Food_Price');
+        $admin->food_description=$request->input('food_description');
+        $admin->meal_type=$request->input('meal_type');
        
         if($request->hasfile('Food_Image'))
         {
@@ -35,28 +41,32 @@ class AdminController extends Controller
         }
 
         $admin->save();
-        return redirect('/adminpage')->with('admin',$admin);
+
+        return view('admin')->with('data',['admin'=>$admin,'meals'=>$meals]);
     }
 
 
     public function display()
     {
+        $meal=meals::all();
         $admins= Admin::all();
-        return view('AdminView')->with('admins',$admins);
+        return view('AdminView')->with('data',['meal'=>$meal,'admins'=>$admins]);
     }
 
     public function edit($id)
-    {
+    {   $meal=meals::all();
         $admins=Admin::find($id);
-        return view('AdminUpdate')->with('admins',$admins);
+        return view('AdminUpdate')->with('data',['meals'=>$meal,'admins'=>$admins]);
     }
 
     public function update(Request $request, $id)
     {
+        $meals=meals::all();
         $admins=Admin::find($id);
         $admins->Food_Name=$request->input('Food_Name');
         $admins->Food_Price=$request->input('Food_Price');
-
+        $admins->food_description=$request->input('food_description');
+        $admins->meal_type=$request->input('meal_type');
 
         
         if($request->hasfile('Food_Image'))
@@ -69,7 +79,7 @@ class AdminController extends Controller
         }
 
         $admins->save();
-        return redirect('/adminpage')->with('admins',$admins);
+        return redirect('/adminpage')->with('data',['admins'=>$admins,'meals'=>$meals]);
     }
 
     function delete($id)
