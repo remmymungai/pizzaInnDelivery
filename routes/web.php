@@ -28,6 +28,16 @@ Route::post('/addimage','AdminController@store')->name('addimage');
 Route::get('/adminpage', 'AdminController@display');
 Route::get('/editimage/{id}','AdminController@edit');
 Route::put('/updateimage/{id}','AdminController@update');
-Route::get('/menu','menuController@index');
+Route::get('/menu','menuController@index')->name('menu.landing');
 Route::get('/delete/{id}','AdminController@delete');
+
+Route::prefix('cart')->name('cart.')->group(function () {
+
+    Route::get('/', 'CartController@index')->name('index');
+    Route::post('/', 'CartController@store')->name('store');
+    Route::put('/', 'CartController@update')->name('update');
+    Route::delete('/', 'CartController@remove')->name('remove');
+    Route::delete('/manage', 'CartController@destroy')->name('manage.destroy');
+
+});
 
