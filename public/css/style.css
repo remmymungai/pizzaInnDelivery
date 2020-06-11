@@ -220,7 +220,7 @@
   align-items: center;
   margin-bottom: 1rem;
   border-radius: 10px;
-  transition: all ease-in 0.4s;
+  transition: all ease-in 0.5s;
 }
 
 .menu_order-toppings:hover .menu_topping {
