@@ -29,7 +29,7 @@
                 <li class="menu_meals"><button class="btn_option" id="drinks">Drinks</button></li>
             </ul>
             <ul class="menu_list">
-                @foreach ($menu as $menu)
+                @foreach ($data['menu'] as $menu)
                 <li class="menu_list_item {{ $menu->meal_type}}">
                     <div class="menu_item row">
                             <div class="col-1-of-2 ">
@@ -43,8 +43,20 @@
                                    <p class=" menu_item_description">
                                         {{ $menu -> food_description}}
                                    </p>
-
-                                   <a href="#" class="btn_customize_order"> order</a>
+                                    <form action="" class="menu_order-form">
+                                        <div class="menu_order-toppings">
+                                        <span class="menu_item_heading">toppings</span> 
+                                            @foreach ($data['toppings'] as $topping)
+                                            <div class="menu_topping">
+                                                <input type="checkbox" class="menu_topping-input" name="{{$topping -> topping_name}}" value="{{$topping->topping_price}}">
+                                                <label for="{{$topping->topping_name}}" class="menu_topping-label">{{$topping->topping_name}} - {{$topping->topping_price}}Ksh</label>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    <button href="#" type="submit" class="btn_customize_order"> order</button>
+                                    </form>
+                                   
+                                   
                             </div>
                      </div>
                 </li>

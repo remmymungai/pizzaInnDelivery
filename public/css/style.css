@@ -211,6 +211,39 @@
   background-color: rgba(255, 226, 119, 0.8);
 }
 
+.menu_order-toppings {
+  margin: auto;
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  transition: all ease-in 0.4s;
+}
+
+.menu_order-toppings:hover .menu_topping {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.menu_topping {
+  display: none;
+}
+
+.menu_topping-input {
+  position: absolute;
+  left: 25%;
+  color: red;
+}
+
+.menu_topping-label {
+  display: block;
+  color: #087956;
+  text-transform: uppercase;
+}
+
 .menu_options {
   list-style: none;
   border: 1px solid;
@@ -283,6 +316,21 @@
   transform: scale(1.5);
 }
 
+.menu_item_heading {
+  text-align: left;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 7px;
+  color: red;
+  margin-bottom: 0.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.5s;
+}
+
 .menu_item_price {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -319,6 +367,7 @@
   text-transform: uppercase;
   padding: 0.8rem 3rem;
   width: 10rem;
+  border: none;
   background-color: white;
   color: rgba(255, 0, 0, 0.6);
   box-shadow: 1px 1px 3px 1.5px rgba(0, 0, 0, 0.2);

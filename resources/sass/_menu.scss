@@ -21,7 +21,38 @@
     text-align: center;
     background-color: rgba(#ffe277,.8);
     
-    
+    &_order-form{
+   
+
+    }
+    &_order-toppings{
+        margin: auto;
+        position: relative;
+        display: flex;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        transition: all ease-in .4s;
+        &:hover .menu_topping{
+            display: inline-block;
+            margin-bottom: .4rem;
+        }
+    }
+    &_topping{
+        display: none;
+        &-input{
+            position: absolute;
+            left: 25%;
+            color: red;
+        }
+        &-label{
+            display: block;
+            color: #087956;
+            text-transform: uppercase;
+        }
+    }
     &_options{
         list-style: none;
         border: 1px solid;
@@ -91,6 +122,18 @@
                 transform: scale(1.5);
             }
         }
+        &_heading{
+            text-align: left;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            font-weight:800;
+            font-size: 1rem;
+            letter-spacing: 7px;
+            color:red;
+            margin-bottom: .2rem;
+            width: fit-content;
+            transition: all .5s;
+        }
         &_price{
             width:fit-content;
             text-transform: uppercase;
@@ -128,6 +171,7 @@
         text-transform: uppercase;
         padding: .8rem 3rem;
         width: 10rem;
+        border: none;
         background-color: white;
         color: rgba($color: red, $alpha: .6);
         box-shadow: 1px 1px 3px 1.5px rgba(black,.2);
