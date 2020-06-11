@@ -43,7 +43,11 @@
                                    <p class=" menu_item_description">
                                         {{ $menu -> food_description}}
                                    </p>
-                                    <form action="" class="menu_order-form">
+                                    <form action="{{ route('cart.store') }}" class="menu_order-form">
+                                        {{csrf_field()}}
+                                        <input type="text" hidden name="pId" value="{{ $menu->id}}">
+                                        <input type="text" hidden name="pName" value="{{ $menu->Food_Name}}">
+                                        <input type="text" hidden name="pPrice" value="{{ $menu->Food_Price}}">
                                         <div class="menu_order-toppings">
                                         <span class="menu_item_heading">toppings</span> 
                                             @foreach ($data['toppings'] as $topping)
