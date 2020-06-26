@@ -41,3 +41,6 @@ Route::prefix('cart')->name('cart.')->group(function () {
 
 });
 
+Route::get('/order', 'ordersController@show');
+Route::get('/start/{id}', 'ordersController@start');
+Route::get('/complete/{id}', 'ordersController@complete');
