@@ -7,6 +7,7 @@
         <ul class="navbar_navigation_list">
             <li class="navbar_navigation_list-item"><a href="/adminpage" class="navbar_link">home</a></li>
             <li class="navbar_navigation_list-item"><a href="/admin" class="navbar_link">add pizza</a></li>
+            <li class="navbar_navigation_list-item"><a href="/order" class="navbar_link">View Orders</a></li>
 
         </ul>
     </div>

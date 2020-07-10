@@ -27,7 +27,7 @@ class CreateOrderProductsTable extends Migration
                 ->on('orders');
 
             $table->foreign('product_id')->references('id')
-                ->on('meal');
+                ->on('menus');
         });
     }
 

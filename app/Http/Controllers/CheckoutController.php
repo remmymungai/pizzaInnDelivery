@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Cart;
+use App\Order;
+use App\OrderProduct;
 
 class CheckoutController extends Controller
 {

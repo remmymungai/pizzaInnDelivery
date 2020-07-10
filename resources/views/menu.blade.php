@@ -61,12 +61,12 @@
                                         <input type="text" hidden name="pPrice" value="{{ $menu->Food_Price}}">
                                         <div class="menu_order-toppings">
                                         <span class="menu_item_heading">toppings</span> 
-                                            @foreach ($data['toppings'] as $topping)
+                                            <!-- @foreach ($data['toppings'] as $topping)
                                             <div class="menu_topping">
                                                 <input type="checkbox" class="menu_topping-input" name="{{$topping -> topping_name}}" id="{{$topping -> topping_name}}" value="{{$topping->topping_price}}">
                                                 <label for="{{$topping->topping_name}}" class="menu_topping-label">{{$topping->topping_name}} - {{$topping->topping_price}}Ksh</label>
                                             </div>
-                                            @endforeach
+                                            @endforeach -->
                                         </div>
                                     <button href="#" type="submit" id="order_btn"  class="btn_customize_order"> order</button>
                                     </form>

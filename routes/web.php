@@ -43,3 +43,7 @@ Route::prefix('cart')->name('cart.')->group(function () {
 Route::prefix('checkout')->name('checkout.')->group(function(){
     Route::post('/','CheckoutController@store')->name('create');
 });
+
+Route::get('/order', 'ordersController@show');
+ Route::get('/start/{id}', 'ordersController@start');
+ Route::get('/complete/{id}', 'ordersController@complete');
