@@ -18,6 +18,14 @@ supreme.addEventListener("click",supremePizzas);
 extras.addEventListener("click",showExtras);
 drinks.addEventListener("click",showDrinks);
 
+function getValues(){
+    var check_boxes=document.getElementsByClassName('menu_topping-input');
+    for(var i=0;i<4;i++){
+        if(check_boxes[i].checked === true){
+            
+        }
+    }
+}
 
 function showAll(){
         $('.Classic').show();
@@ -48,6 +56,7 @@ function classicPizzas(){
         $('.Drinks').hide();
     }else{
         showAll();
+        resetColor();
         classic_clicked=false;
     }
 
@@ -66,6 +75,7 @@ function deluxePizzas(){
         $('.Drinks').hide();
     }else{
         showAll();
+        resetColor();
         deluxe_clicked=false;
     }
 
@@ -84,6 +94,7 @@ function supremePizzas(){
         $('.Drinks').hide();
     }else{
         showAll();
+        resetColor();
         supreme_clicked=false;
     }
 
@@ -102,6 +113,7 @@ function showExtras(){
         $('.Drinks').hide();
     }else{
         showAll();
+        resetColor();
         extras_clicked=false;
     }
 
@@ -121,6 +133,7 @@ function showDrinks(){
         
     }else{
         showAll();
+        resetColor();
         drinks_clicked=false;
     }
 

@@ -12,10 +12,27 @@
     </head>
     <body>
     @include('includes.navbar')
+    
     <br><br><br><br><br>
+    
         <div class="content">
+
+@if (session('status'))
+<div class="alert alert-success" role="alert">
+    {{ session('status') }}
+</div>
+@endif
+
+@if (session('error'))
+<div class="alert alert-danger" role="alert">
+    {{ session('error') }}
+</div>
+@endif
+
             @yield('content')
+           
         </div>
     @include('includes.footer')
     </body>
+    @yield('scripts')
 </html>

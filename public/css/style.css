@@ -211,6 +211,10 @@
   background-color: rgba(255, 226, 119, 0.8);
 }
 
+.menu_order-form {
+  transition: all 0.5s;
+}
+
 .menu_order-toppings {
   margin: auto;
   position: relative;
@@ -220,7 +224,7 @@
   align-items: center;
   margin-bottom: 1rem;
   border-radius: 10px;
-  transition: all ease-in 0.5s;
+  transition: all 0.5s;
 }
 
 .menu_order-toppings:hover .menu_topping {
@@ -230,6 +234,7 @@
 
 .menu_topping {
   display: none;
+  transition: all 0.5s;
 }
 
 .menu_topping-input {
@@ -464,6 +469,42 @@
   border-right: 1px solid;
 }
 
+.pop__up__cart {
+  position: fixed;
+  right: 3rem;
+  top: 10rem;
+}
+
+.pop__up__cart #cart-toggle {
+  visibility: hidden;
+}
+
+.pop__up__cart__toggle {
+  background-color: white;
+  position: relative;
+  padding: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.7);
+}
+
+.pop__up__cart__heading {
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+  text-shadow: whitesmoke;
+}
+
+.pop__up__cart__body {
+  position: absolute;
+  top: 4rem;
+  width: 30rem;
+  right: 0;
+  background-color: #ffe277;
+  border: 1px solid;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -475,6 +516,25 @@
   align-items: center;
   margin-bottom: 1rem;
   background-image: linear-gradient(90deg, #087956 15%, rgba(0, 0, 0, 0.9) 15%);
+}
+
+.navbar_btn_cart {
+  color: red;
+  padding: 0.5rem;
+  border: 1px solid;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.navbar_btn_cart:hover {
+  padding-left: 8rem;
+  padding-top: 2rem;
+  transition: scale(1.1);
+  background-color: rgba(255, 0, 0, 0.8);
+  border: none;
+  font-style: bold;
+  color: white;
 }
 
 .navbar_logo_box {

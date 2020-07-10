@@ -22,8 +22,7 @@
     background-color: rgba(#ffe277,.8);
     
     &_order-form{
-   
-
+        transition: all  .5s;
     }
     &_order-toppings{
         margin: auto;
@@ -34,7 +33,7 @@
         align-items: center;
         margin-bottom: 1rem;
         border-radius: 10px;
-        transition: all ease-in .5s;
+        transition: all  .5s;
         &:hover .menu_topping{
             display: inline-block;
             margin-bottom: .4rem;
@@ -42,6 +41,7 @@
     }
     &_topping{
         display: none;
+        transition: all  .5s;
         &-input{
             position: absolute;
             left: 25%;

@@ -34,15 +34,18 @@ class CartController extends Controller
         $pId = $request->pId;
         $pName = $request->pName;
         $pPrice = $request->pPrice;
-
-        \Cart::add(array(
-            'id' => $pId,
-            'name' => $pName,
-            'price' => $pPrice,
-            'quantity' => '1',
-            'attributes' => array(),
-            'associatedModel' => 'App\meals'
-        ));
+        $toppings= $request->session()->get('toppings');
+      
+            \Cart::add(array(
+                'id' => $pId,
+                'name' => $pName,
+                'price' => $pPrice,
+                'quantity' => '1',
+                'attributes' => array(),
+                'associatedModel' => 'App\meals'
+            ));
+      
+        
 
 
 

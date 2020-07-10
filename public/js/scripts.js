@@ -37344,6 +37344,14 @@ supreme.addEventListener("click", supremePizzas);
 extras.addEventListener("click", showExtras);
 drinks.addEventListener("click", showDrinks);
 
+function getValues() {
+  var check_boxes = document.getElementsByClassName('menu_topping-input');
+
+  for (var i = 0; i < 4; i++) {
+    if (check_boxes[i].checked === true) {}
+  }
+}
+
 function showAll() {
   $('.Classic').show();
   $('.Deluxe').show();
@@ -37374,6 +37382,7 @@ function classicPizzas() {
     $('.Drinks').hide();
   } else {
     showAll();
+    resetColor();
     classic_clicked = false;
   }
 }
@@ -37392,6 +37401,7 @@ function deluxePizzas() {
     $('.Drinks').hide();
   } else {
     showAll();
+    resetColor();
     deluxe_clicked = false;
   }
 }
@@ -37410,6 +37420,7 @@ function supremePizzas() {
     $('.Drinks').hide();
   } else {
     showAll();
+    resetColor();
     supreme_clicked = false;
   }
 }
@@ -37428,6 +37439,7 @@ function showExtras() {
     $('.Drinks').hide();
   } else {
     showAll();
+    resetColor();
     extras_clicked = false;
   }
 }
@@ -37446,6 +37458,7 @@ function showDrinks() {
     $('.Extras').hide();
   } else {
     showAll();
+    resetColor();
     drinks_clicked = false;
   }
 }
@@ -37515,8 +37528,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/eugeneikonya/Desktop/WorkStation/web_dev/pizzaInnDelivery/pizzaInnDelivery/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/eugeneikonya/Desktop/WorkStation/web_dev/pizzaInnDelivery/pizzaInnDelivery/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /Users/eugeneikonya/Desktop/WorkStation/SchoolProjects/pizzaInnDelivery/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/eugeneikonya/Desktop/WorkStation/SchoolProjects/pizzaInnDelivery/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
 /***/ })

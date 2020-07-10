@@ -21,7 +21,7 @@ Cart || Pizza Inn
 @endif
 
 
-<div class="container">
+<div class="container-width" style="z-index = -1">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -56,7 +56,7 @@ Cart || Pizza Inn
                             </div>
 
                             <span class="input-group-fl">
-                                <span class="text-muted ">{{ $item->quantity }} * {{ $item->model->presentPrice() }}
+                                <span class="text-muted ">{{ $item->quantity }} * {{ $item->price }}
                                 </span>
                             </span>
                         </li>

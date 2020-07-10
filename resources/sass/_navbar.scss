@@ -9,6 +9,24 @@
     align-items: center;
     margin-bottom: 1rem;
     background-image: linear-gradient(90deg , rgba(#087956,1)15%,rgba(black,.9)15%);
+    &_btn_cart{
+        color: red;
+        padding: .5rem;
+        border: 1px solid;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .5s;
+
+        &:hover{
+            padding-left: 8rem;
+            padding-top: 2rem;
+            transition: scale(1.1);
+            background-color: rgba(red,.8);
+            border: none;
+            font-style: bold;
+            color: white;
+        }
+    }
     &_logo_box{//container box for the logo
         background-color: #087956;
         transition: all .5s;
@@ -32,6 +50,7 @@
             }
         }
     }
+
     &_link,&:visited{
         text-decoration: none;
         text-transform: uppercase;

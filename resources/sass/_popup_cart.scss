@@ -1,0 +1,32 @@
+.pop__up__cart{
+    position: fixed;
+    right: 3rem;
+    top: 10rem;
+    #cart-toggle{
+       visibility: hidden;
+    }
+
+    &__toggle{
+        background-color: white;
+        position: relative;
+        padding: 2rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba(#000,.7);
+    }
+    &__heading{
+        text-align: center;
+        text-transform: uppercase;
+        color: red;
+        text-shadow: whitesmoke;
+    }
+    &__body{
+        position: absolute;
+        top: 4rem;
+        width: 30rem;
+        right: 0;
+        background-color: #ffe277;
+        border: 1px solid;
+    }
+}

@@ -16,7 +16,18 @@
             </ul>
            
         </div> -->
+        <!-- <div class="pop__up__cart">
+            <input type="checkbox" name="cart-toggle" id="cart-toggle">
+            <label for="cart-toggle" class="pop__up__cart__toggle">&nbsp;</label>
+            <div class="pop__up__cart__body">
+                <h1 class="pop__up__cart__heading">your  cart</h1>
+                <ul class="pop__up__cart__list">
+                    <li class="pop__up__cart__list__item">
 
+                    </li>
+                </ul>
+            </div>
+        </div> -->
         <div class="menu">
             <div class="menu_heading">
                 <h1 class="menu_title">Menu</h1>
@@ -43,7 +54,7 @@
                                    <p class=" menu_item_description">
                                         {{ $menu -> food_description}}
                                    </p>
-                                    <form action="{{ route('cart.store') }}" class="menu_order-form">
+                                    <form action="{{ route('cart.store') }}" method="post" class="menu_order-form">
                                         {{csrf_field()}}
                                         <input type="text" hidden name="pId" value="{{ $menu->id}}">
                                         <input type="text" hidden name="pName" value="{{ $menu->Food_Name}}">
@@ -52,12 +63,12 @@
                                         <span class="menu_item_heading">toppings</span> 
                                             @foreach ($data['toppings'] as $topping)
                                             <div class="menu_topping">
-                                                <input type="checkbox" class="menu_topping-input" name="{{$topping -> topping_name}}" value="{{$topping->topping_price}}">
+                                                <input type="checkbox" class="menu_topping-input" name="{{$topping -> topping_name}}" id="{{$topping -> topping_name}}" value="{{$topping->topping_price}}">
                                                 <label for="{{$topping->topping_name}}" class="menu_topping-label">{{$topping->topping_name}} - {{$topping->topping_price}}Ksh</label>
                                             </div>
                                             @endforeach
                                         </div>
-                                    <button href="#" type="submit" class="btn_customize_order"> order</button>
+                                    <button href="#" type="submit" id="order_btn"  class="btn_customize_order"> order</button>
                                     </form>
                                    
                                    

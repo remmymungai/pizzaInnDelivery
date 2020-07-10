@@ -40,4 +40,6 @@ Route::prefix('cart')->name('cart.')->group(function () {
     Route::delete('/manage', 'CartController@destroy')->name('manage.destroy');
 
 });
-
+Route::prefix('checkout')->name('checkout.')->group(function(){
+    Route::post('/','CheckoutController@store')->name('create');
+});
