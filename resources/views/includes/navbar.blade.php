@@ -6,8 +6,8 @@
     <div class="navbar_navigation">
         <ul class="navbar_navigation_list">
             <li class="navbar_navigation_list-item"><a href="#" class="navbar_link">home</a></li>
-            <li class="navbar_navigation_list-item"><a href="#" class="navbar_link">menu</a></li>
-            <li class="navbar_navigation_list-item"><a href="#" class="navbar_link">contact us</a></li>
+            <li class="navbar_navigation_list-item"><a href="/menu" class="navbar_link">menu</a></li>
+            <li class="navbar_navigation_list-item"><a href="/contacts" class="navbar_link">contact us</a></li>
         </ul>
     </div>
     <div class="navbar_logout">
